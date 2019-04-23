@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'dev.spiti.utilities'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation ('org.neo4j.driver:neo4j-java-driver:2.0.0-alpha01',
+                    'com.datastax.cassandra:cassandra-driver-core:3.3.0')
+    testImplementation ('org.testng:testng:6.11',
+                        'org.hamcrest:hamcrest-all:1.3')
+}
