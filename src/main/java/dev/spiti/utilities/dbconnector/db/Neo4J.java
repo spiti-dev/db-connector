@@ -15,6 +15,14 @@ public class Neo4J implements DBConnector {
   private Session session;
   private String url, username, password;
   
+  
+  
+  /**
+   * Sets the required attributes and creates a session with database
+   * @param url
+   * @param username
+   * @param password
+   */
   public Neo4J(String url, String username, String password) {
     this.url = url;
     this.username = username;
@@ -27,6 +35,12 @@ public class Neo4J implements DBConnector {
     return driver.session();
   }
   
+  /**
+   * Accepts the statement as String and args as Map<String, Object> object.
+   * @param statement Select statement as a string, returning only one column
+   * @param args all arguments as Object of Map<String, Object>
+   * @return Returns all items from requested one column as list, all values are read as strings
+   */
   @Override
   public List<String> getKey(String statement, Object args) {
     
@@ -41,6 +55,12 @@ public class Neo4J implements DBConnector {
     return list;
   }
   
+  /**
+   * Accepts the statement as String and args as Map<String, Object> object.
+   * @param statement Select statement as a string, returning only one column
+   * @param args all arguments as Object of Map<String, Object>
+   * @return Returns all items from requested one column as list, each row is read as map.
+   */
   @Override
   public List<Map<String, Object>> getData(String statement, Object args) {
     List<Map<String, Object>> list = new ArrayList<>();
@@ -48,6 +68,12 @@ public class Neo4J implements DBConnector {
     return list;
   }
   
+  /**
+   * Accepts the statement as String and args as Map<String, Object> object.
+   * @param statement Select statement as a string, returning only one column
+   * @param args all arguments as Object of Map<String, Object>
+   * @return Returns all items from requested one column as list, each node is read as map.
+   */
   public List<Map<String, Object>> getNodes(String statement, Map<String, Object> args) {
     List<Map<String, Object>> list = new ArrayList<>();
     getRecords(statement, args).stream().forEach(record -> list.add(record.get(0).asMap()));
@@ -59,6 +85,9 @@ public class Neo4J implements DBConnector {
     return result.list();
   }
   
+  /**
+   * Close the session and connection
+   */
   @Override
   public void closeConnection() {
     session.close();

@@ -79,6 +79,12 @@ public class Cassandra implements DBConnector {
     return keys;
   }
   
+  /**
+   * Accepts the statement as String and args as List<String> object.
+   * @param statement Select statement as a string, returning only one column
+   * @param args all arguments as Object of List<String>
+   * @return Returns all items from requested one column as list, each row is read as map.
+   */
   @Override
   public List<Map<String, Object>> getData(String statement, Object args) {
     List<String> queryArgs = (List<String>) args;
@@ -88,6 +94,9 @@ public class Cassandra implements DBConnector {
     return normalizeResults(resultSet);
   }
   
+  /**
+   * Close the session and connection
+   */
   @Override
   public void closeConnection() {
     cluster.close();
