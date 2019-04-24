@@ -4,7 +4,7 @@ import com.datastax.driver.core.*;
 import com.datastax.driver.core.policies.DCAwareRoundRobinPolicy;
 import com.datastax.driver.core.policies.DefaultRetryPolicy;
 import com.datastax.driver.core.policies.TokenAwarePolicy;
-import dev.spiti.utilities.dbconnector.DBConnector;
+import dev.spiti.utilities.dbconnector.Connector;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 /**
  * Created by naresh.g@spititech.com on 2019-04-22
  */
-public class Cassandra implements DBConnector {
+public class Cassandra implements Connector {
   
   private Session session;
   private Cluster cluster;

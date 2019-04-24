@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * Created by naresh.g@spititech.com on 2019-04-22
  */
-public interface DBConnector {
+public interface Connector {
   
   List<String> getKey(String statement, Object args);
   List<Map<String, Object>> getData(String statement, Object args);

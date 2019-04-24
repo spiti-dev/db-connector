@@ -1,6 +1,6 @@
 package dev.spiti.utilities.dbconnector.db;
 
-import dev.spiti.utilities.dbconnector.DBConnector;
+import dev.spiti.utilities.dbconnector.Connector;
 import org.neo4j.driver.*;
 
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import java.util.Map;
 /**
  * Created by naresh.g@spititech.com on 2019-04-22
  */
-public class Neo4J implements DBConnector {
+public class Graph implements Connector {
   
   private Session session;
   private String url, username, password;
@@ -23,7 +23,7 @@ public class Neo4J implements DBConnector {
    * @param username
    * @param password
    */
-  public Neo4J(String url, String username, String password) {
+  public Graph(String url, String username, String password) {
     this.url = url;
     this.username = username;
     this.password = password;
