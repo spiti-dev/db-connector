@@ -36,9 +36,9 @@ public class Graph implements Connector {
   }
   
   /**
-   * Accepts the statement as String and args as Map<String, Object> object.
+   * Accepts the statement as String and args as object of map of string and object.
    * @param statement Select statement as a string, returning only one column
-   * @param args all arguments as Object of Map<String, Object>
+   * @param args all arguments as Object of map of string and object
    * @return Returns all items from requested one column as list, all values are read as strings
    */
   @Override
@@ -56,9 +56,9 @@ public class Graph implements Connector {
   }
   
   /**
-   * Accepts the statement as String and args as Map<String, Object> object.
+   * Accepts the statement as String and args as object of map of string and object.
    * @param statement Select statement as a string, returning only one column
-   * @param args all arguments as Object of Map<String, Object>
+   * @param args all arguments as Object of map of string and object
    * @return Returns all items from requested one column as list, each row is read as map.
    */
   @Override
@@ -69,9 +69,9 @@ public class Graph implements Connector {
   }
   
   /**
-   * Accepts the statement as String and args as Map<String, Object> object.
+   * Accepts the statement as String and args as object of map of string and object.
    * @param statement Select statement as a string, returning only one column
-   * @param args all arguments as Object of Map<String, Object>
+   * @param args all arguments as Object of map of string and object
    * @return Returns all items from requested one column as list, each node is read as map.
    */
   public List<Map<String, Object>> getNodes(String statement, Map<String, Object> args) {

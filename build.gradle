@@ -37,7 +37,7 @@ publishing {
             artifactId = 'db-connector'
             from components.java
             artifact sourcesJar
-            //artifact javadocJar
+            artifact javadocJar
             versionMapping {
                 usage('java-api') {
                     fromResolutionOf('runtimeClasspath')

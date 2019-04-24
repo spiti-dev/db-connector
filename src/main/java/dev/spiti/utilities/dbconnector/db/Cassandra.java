@@ -61,9 +61,9 @@ public class Cassandra implements Connector {
   }
   
   /**
-   * Accepts the statement as String and args as List<String> object.
+   * Accepts the statement as String and args as list of strings object.
    * @param statement Select statement as a string, returning only one column
-   * @param args all arguments as Object of List<String>
+   * @param args all arguments as Object of list of strings
    * @return Returns all items from requested one column as list, all values are read as strings
    */
   @Override
@@ -80,9 +80,9 @@ public class Cassandra implements Connector {
   }
   
   /**
-   * Accepts the statement as String and args as List<String> object.
+   * Accepts the statement as String and args as list of strings object.
    * @param statement Select statement as a string, returning only one column
-   * @param args all arguments as Object of List<String>
+   * @param args all arguments as Object of list of strings
    * @return Returns all items from requested one column as list, each row is read as map.
    */
   @Override
