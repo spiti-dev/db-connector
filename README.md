@@ -7,7 +7,7 @@
 *  [Limitations](#lims)
 *  [Examples](#ex)
     * [Cassandra](#c*)
-    * [Graph](gr)
+    * [Graph](#gr)
 
 <a name="kf"></a>
 ## Key Features
